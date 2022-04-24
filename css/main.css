@@ -53,14 +53,19 @@
         color: #959BA4;
     }
 
-    .pages li {
-        transition: 0.4s;
+    .pages a {
+        transition: 0.4s ease;
+        color: #959BA4;
     }
 
-    .pages li:hover {
+    .pages a:hover {
         cursor: pointer;
         font-style: bold;
         color: black;
+    }
+
+    .login{
+        display: none;
     }
 
     .nav-left img {
@@ -72,7 +77,7 @@
         display: none;
     }
 
-    .login button {
+    .login-btn button {
         width: 5vw;
         height: 3vw;
         border: none;
@@ -143,7 +148,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        transition: 0.5s;
+        transition: 0.5s ease;
         color: #C6C6C6;
     }
 

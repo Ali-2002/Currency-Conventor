@@ -1,7 +1,7 @@
 //Selectors
 let hamburger = document.querySelector("#hamburger i");
 let hamburgerDiv = document.querySelector("#hamburger");
-let closeMenu = document.querySelector("#close-menu");
+let closeMenu = document.querySelector("#close-menu i");
 let mobilenav = document.querySelector(".pages")
 const crFrom = document.querySelectorAll(".left-side button");
 const crTo = document.querySelectorAll(".right-side button");
@@ -14,15 +14,15 @@ let base = 'RUB',
 
 hamburger.addEventListener("click", (e) => {
     e.preventDefault();
-    if (hamburgerDiv.style.display === "flex") {
-        hamburgerDiv.style.display = "none";
-        mobilenav.style.display = "flex";
+    if (hamburgerDiv.style.display == 'flex') {
+        hamburgerDiv.style.display = 'none';
+        mobilenav.style.display = 'flex';
     }
 });
 closeMenu.addEventListener("click", (e) => {
     e.preventDefault();
-    if (mobilenav.style.display == "flex") {
-        mobilenav.style.display = "none";
+    if (mobilenav.style.display == 'flex') {
+        mobilenav.style.display = 'none';
         hamburgerDiv.style.display = "flex";
     }
 });
@@ -38,6 +38,7 @@ crFrom.forEach(element => {
         base = e.target.value;
         console.log(base);
         calculate();
+        //calculate_2();
     });
 });
 
@@ -51,6 +52,7 @@ crTo.forEach(element => {
         symbols = e.target.value;
         console.log(symbols);
         calculate();
+        //calculate_2();
     });
 });
 
@@ -75,10 +77,6 @@ async function calculate() {
             console.log(err);
         });
 
-    if (inputText.value == "" || inputText.value == "0") {
-        outputText.value = "";
-    }
-
     let requestUrl_2 = fetch(`https://api.exchangerate.host/latest?base=${symbols}&symbols=${base}`)
     requestUrl_2
         .then((res) => res.json())
@@ -91,6 +89,11 @@ async function calculate() {
         .catch((err) => {
             console.log(err);
         });
+    inputText.addEventListener("keyup", (e) => {
+        if (inputText.value == "") {
+            outputText.value = "";
+        }
+    })
 }
 
 async function calculate_2() {
@@ -104,12 +107,8 @@ async function calculate_2() {
             info[0].innerHTML = `1 ${symbols} = ${rate} ${base}`;
         })
         .catch((err) => {
-            console.log(err);
+            alert('Error');
         });
-
-    if (outputText.value == "" || outputText.value == "0") {
-        inputText.value = "";
-    }
 
     let requestUrl_2 = fetch(`https://api.exchangerate.host/latest?base=${symbols}&symbols=${base}`)
     requestUrl_2
@@ -126,8 +125,13 @@ async function calculate_2() {
             inputText.value = (outputText.value * rate).toFixed(4);
         })
         .catch((err) => {
-            console.log(err);
+            alert('Error');
         });
+    outputText.addEventListener("keyup", (e) => {
+        if (outputText.value == "") {
+            inputText.value = "";
+        }
+    })
 }
 
 
