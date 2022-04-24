@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Conventor</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 </head>
 
 <body>
@@ -16,13 +18,17 @@
                 <div class="nav-left">
                     <a href="#" class="logo"><img src="/images/Asset 1@3x 1.svg" alt=""></a>
                 </div>
+                <button id="hamburger"><i class="fa fa-bars"></i></button>
+                
                 <div class="header-content">
+                   
                     <ul class="pages">
+                        <button id="close-menu"><i class="fa fa-times"></i></button>
                         <li>bank</li>
                         <li>business</li>
                         <li>investment</li>
                         <li>insurance</li>
-                        <li>mobile</li>
+                        <li>mobile</li> 
                         <li>travel</li>
                         <li>entertainment</li>
                     </ul>
@@ -38,34 +44,34 @@
 
             <div class="conventor">
 
-                <div class="convert">
+                <div class=" left-side convert">
                     <h4>I have</h4>
                     <div class="currencies cr-from">
-                        <button>RUB</button>
-                        <button>USD</button>
-                        <button>EUR</button>
-                        <button>GBP</button>
+                        <button value="RUB" class="activated">RUB</button>
+                        <button value="USD">USD</button>
+                        <button value="EUR">EUR</button>
+                        <button value="GBP">GBP</button>
                     </div>
 
                     <div class="input text-from">
-                        <input class="input-text" type="number" placeholder="add...">
+                        <input class="input-text" type="text" placeholder="add...">
                         <p class="info">1 RUB = 0.0135 USD</p>
                     </div>
                 </div>
 
 
 
-                <div class="convert">
+                <div class="right-side convert">
                     <h4>I want to buy</h4>
                     <div class="currencies cr-to">
-                        <button>RUB</button>
-                        <button>USD</button>
-                        <button>EUR</button>
-                        <button>GBP</button>
+                        <button value="RUB">RUB</button>
+                        <button value="USD" class="activated">USD</button>
+                        <button value="EUR">EUR</button>
+                        <button value="GBP">GBP</button>
                     </div>
 
                     <div class="input text-to">
-                        <input class="output-text" type="number" placeholder="add...">
+                        <input class="output-text" type="text" placeholder="...">
                         <p class="info">1 USD = 73.8896 RUB</p>
                     </div>
                 </div>
@@ -75,6 +81,7 @@
 
         </div>
     </main>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

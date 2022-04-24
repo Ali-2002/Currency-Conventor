@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
-
-@media screen and (min-width:801px) {
+@media screen and (min-width:320px) and (max-width:800px) {
     * {
         margin: 0;
         padding: 0;
@@ -26,31 +24,29 @@
     }
 
     .navbar {
-        width: 100%;
+        width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .header-content {
-        height: 80%;
-        width: 60vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .pages {
-        width: 100%;
-        display: flex;
+        width: 24%;
+        position: absolute;
+        top: 8%;
+        right: 0;
+        display: none;
+        /* display: flex; */
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 1vw;
-        line-height: 1.1vw;
+        font-size: 2vw;
+        line-height: 300%;
         letter-spacing: 0.06em;
         color: #959BA4;
+        background-color: #c4c4c4;
     }
 
     .pages li {
@@ -64,22 +60,47 @@
     }
 
     .nav-left img {
-        width: 7.8vw;
+        width: 15vw;
     }
 
-    #hamburger,
+    #hamburger {
+        display: flex;
+        /* display: none; */
+        width: 100%;
+        height: 100%;
+        margin-right: 1.5vw;
+        align-items: center;
+        justify-content: flex-end;
+        border: none;
+        outline: none;
+        background: none;
+    }
+
     #close-menu {
-        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 1.5vw 2.5vw 0 0;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        outline: none;
+        background: none;
+    }
+
+    .login {
+        height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .login button {
-        width: 5vw;
-        height: 3vw;
+        width: 7vw;
+        height: 4vw;
         border: none;
         background: none;
         font-weight: 500;
-        font-size: 1vw;
-        line-height: 1.1vw;
+        font-size: 3vw;
         text-align: center;
         letter-spacing: 0.06em;
         cursor: pointer;
@@ -94,9 +115,8 @@
     }
 
     .main-text {
-        margin-bottom: 3vw;
         font-weight: 700;
-        font-size: 4vw;
+        font-size: 6vw;
         line-height: 6vw;
 
         color: #000000;
@@ -105,25 +125,28 @@
     .conventor {
         width: 56vw;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .convert {
         display: flex;
         flex-direction: column;
+        margin-top: 5vw;
     }
 
     .convert h4 {
         font-weight: 400;
-        font-size: 1.2vw;
-        line-height: 1.2vw;
+        font-size: 2.5vw;
+        line-height: 2vw;
         margin-bottom: 0.5vw;
         color: #9F9F9F;
     }
 
     .currencies {
-        width: 22.5vw;
-        height: 2.6vw;
+        width: 50vw;
+        height: 6vw;
         display: flex;
         justify-content: space-between;
         font-weight: 400;
@@ -137,8 +160,8 @@
         border: none;
         border-right: 1px solid #E5E5E5;
         outline: none;
-        font-size: 1.2vw;
-        line-height: 1.2vw;
+        font-size: 2.5vw;
+        line-height: 2vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,8 +188,8 @@
     }
 
     .input {
-        width: 22.5vw;
-        height: 9vw;
+        width: 50vw;
+        height: 20vw;
         border: 1px solid #E5E5E5;
         border-radius: 0.5vw;
         padding: 1.2vw 0 0 1.2vw;
@@ -176,20 +199,20 @@
     .input input {
         border: none;
         outline: none;
-        width: 17.5vw;
-        height: 3.5vw;
+        width: 30vw;
+        height: 7vw;
         font-weight: 700;
-        font-size: 3vw;
-        line-height: 3.5vw;
+        font-size: 5vw;
+        line-height: 4vw;
         padding: 0.5vw;
         color: #000000;
-        margin-bottom: 1.8vw;
+        margin-bottom: 8vw;
 
     }
 
     .info {
         font-weight: 400;
-        font-size: 1.2vw;
+        font-size: 3vw;
         line-height: 1.2vw;
         color: #C6C6C6;
     }
