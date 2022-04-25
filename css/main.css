@@ -81,15 +81,15 @@
         width: 5vw;
         height: 3vw;
         border: none;
-        background: none;
+        background: #833AE0;
         font-weight: 500;
         font-size: 1vw;
         line-height: 1.1vw;
         text-align: center;
         letter-spacing: 0.06em;
         cursor: pointer;
-
-        color: #000000;
+        border-radius: .5vw;
+        color: #fff;
     }
 
     .container {

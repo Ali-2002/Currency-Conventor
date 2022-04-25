@@ -32,8 +32,8 @@
 
     .pages {
         width: 50%;
-        height: 100%;
-        position: absolute;
+        height: 105.5%;
+        position: fixed;
         top: 0;
         right: 0;
         display: none;
