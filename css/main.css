@@ -40,6 +40,9 @@
         justify-content: center;
     }
 
+    .header-phone{
+        display: none;
+    }
     .pages {
         width: 100%;
         display: flex;
@@ -72,9 +75,11 @@
         width: 7.8vw;
     }
 
-    #hamburger,
-    #close-menu {
+    #hamburger{
         display: none;
+        color: #833AE0;
+        font-size: xx-large;
+        cursor: pointer;
     }
 
     .login-btn button {
