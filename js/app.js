@@ -9,8 +9,8 @@ let info = document.querySelectorAll(".info");
 let allCrItems = document.querySelectorAll(".cr-from button");
 let base = 'RUB',
     symbols = 'USD';
-inputText.value="1" 
-outputText.value="0.0129"   
+inputText.value = "1"
+outputText.value = "0.0129"
 let menu = document.querySelector(".header-phone  .menu");
 let menubar = document.querySelector(".header-phone .menu-bar");
 menu.addEventListener("click", () => {
@@ -24,9 +24,9 @@ function commify(n) {
     const decimalPart = parts[1];
     const thousands = /\B(?=(\d{3})+(?!\d))/g;
     return (
-      numberPart.replace(thousands, " ") + (decimalPart ? "." + decimalPart : "")
+        numberPart.replace(thousands, " ") + (decimalPart ? "." + decimalPart : "")
     );
-  }
+}
 
 crFrom.forEach(element => {
     element.addEventListener("click", (e) => {
@@ -117,7 +117,7 @@ async function calculate_2() {
             // }
             inputText.value = "";
             inputText.value = (outputText.value.replaceAll(" ", "") * rate).toFixed(4);
-            inputText.value=commify(inputText.value)
+            inputText.value = commify(inputText.value)
         })
         .catch((err) => {
             alert(err);
@@ -134,13 +134,6 @@ $(document).ready(function () {
 
 inputText.addEventListener("input", calculate);
 outputText.addEventListener("input", calculate_2);
-
-// inputText.addEventListener("click", () => {
-//     inputText.value = "";
-// })
-// outputText.addEventListener("click", () => {
-//     outputText.value = "";
-// })
 
 var numberMask = IMask(firstInput, {
     mask: Number, // enable number mask
