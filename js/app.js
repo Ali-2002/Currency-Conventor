@@ -10,7 +10,7 @@ let allCrItems = document.querySelectorAll(".cr-from button");
 let base = 'RUB',
     symbols = 'USD';
 inputText.value = "1"
-outputText.value = "0.0129"
+calculate()
 let menu = document.querySelector(".header-phone  .menu");
 let menubar = document.querySelector(".header-phone .menu-bar");
 menu.addEventListener("click", () => {
@@ -65,9 +65,12 @@ async function calculate() {
             const rate = Object.entries(data.rates)[0][1];
             info[0].innerHTML = "";
             info[0].innerHTML = `1 ${base} = ${rate} ${symbols}`;
-            outputText.value = "";
-            outputText.value = (inputText.value.replaceAll(" ", "") * rate).toFixed(4);
-            outputText.value = commify(outputText.value)
+            if (inputText.value == "") {
+                outputText.value = "";
+            } else {
+                outputText.value = (inputText.value.replaceAll(" ", "") * rate);
+                outputText.value = commify(outputText.value)
+            }
         })
         .catch((err) => {
             alert(err);
@@ -109,9 +112,13 @@ async function calculate_2() {
             const rate = Object.entries(data.rates)[0][1];
             info[1].innerHTML = "";
             info[1].innerHTML = `1 ${symbols} = ${rate} ${base}`;
-            inputText.value = "";
-            inputText.value = (outputText.value.replaceAll(" ", "") * rate).toFixed(4);
-            inputText.value = commify(inputText.value)
+            if (outputText.value == "") {
+                inputText.value = "";
+            } else {
+
+                inputText.value = (outputText.value.replaceAll(" ", "") * rate);
+                inputText.value = commify(inputText.value)
+            }
         })
         .catch((err) => {
             alert(err);
@@ -133,7 +140,7 @@ var numberMask = IMask(firstInput, {
     mask: Number, // enable number mask
 
     // other options are optional with defaults below
-    scale: 6, // digits after point, 0 for integers
+    scale: 4, // digits after point, 0 for integers
     signed: false, // disallow negative
     thousandsSeparator: ' ', // any single char
     padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
@@ -147,7 +154,7 @@ var numberMask = IMask(secondInput, {
     mask: Number, // enable number mask
 
     // other options are optional with defaults below
-    scale: 6, // digits after point, 0 for integers
+    scale: 4, // digits after point, 0 for integers
     signed: false, // disallow negative
     thousandsSeparator: ' ', // any single char
     padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
