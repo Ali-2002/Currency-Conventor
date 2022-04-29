@@ -261,7 +261,7 @@
         position: absolute;
         top: 0;
         left: 100%;
-        height: auto;
+        height: 113vh;
         width: 100%;
         background-color: white;
         transition: .5s;
