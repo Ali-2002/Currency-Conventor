@@ -65,9 +65,9 @@ async function calculate() {
             const rate = Object.entries(data.rates)[0][1];
             info[0].innerHTML = "";
             info[0].innerHTML = `1 ${base} = ${rate} ${symbols}`;
-            // if (inputText.value.includes(',')) {
-            //     inputText.value = inputText.value.replace(',', '.');
-            // }
+            if (inputText.value.includes(',')) {
+                inputText.value = inputText.value.replace(',', '.');
+            }
             outputText.value = "";
             outputText.value = (inputText.value.replaceAll(" ", "") * rate).toFixed(4);
             outputText.value = commify(outputText.value)
@@ -112,9 +112,9 @@ async function calculate_2() {
             const rate = Object.entries(data.rates)[0][1];
             info[1].innerHTML = "";
             info[1].innerHTML = `1 ${symbols} = ${rate} ${base}`;
-            // if (outputText.value.includes(',')) {
-            //     outputText.value = outputText.value.replace(',', '.');
-            // }
+            if (outputText.value.includes(',')) {
+                outputText.value = outputText.value.replace(',', '.');
+            }
             inputText.value = "";
             inputText.value = (outputText.value.replaceAll(" ", "") * rate).toFixed(4);
             inputText.value = commify(inputText.value)
@@ -144,8 +144,8 @@ var numberMask = IMask(firstInput, {
     thousandsSeparator: ' ', // any single char
     padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
     normalizeZeros: true, // appends or removes zeros at ends
-    radix: '.', // fractional delimiter
-    mapToRadix: ['.'], // symbols to process as radix
+    // radix: '.', // fractional delimiter
+    // mapToRadix: ['.'], // symbols to process as radix
 
 });
 
@@ -158,7 +158,7 @@ var numberMask = IMask(secondInput, {
     thousandsSeparator: ' ', // any single char
     padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
     normalizeZeros: true, // appends or removes zeros at ends
-    radix: '.', // fractional delimiter
-    mapToRadix: ['.'], // symbols to process as radix
+    // radix: '.', // fractional delimiter
+    // mapToRadix: ['.'], // symbols to process as radix
 
 });
