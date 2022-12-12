@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conventor</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <div class="navbar">
+                <div class="nav-left">
+                    <a href="#"><img src="/images/logo.svg" alt=""></a>
+                </div>
+
+
+                <div class="header-content">
+
+                    <ul class="pages">
+                        <li><a href="#">BANK</a></li>
+                        <li><a href="#">BUSINESS</a></li>
+                        <li><a href="#">INVESTMENTS</a></li>
+                        <li><a href="#">INSURANCE</a></li>
+                        <li><a href="#">MOBILE</a></li>
+                        <li><a href="#">TRIPS</a></li>
+                        <li><a href="#">ENTERTAINMENT</a></li>
+                    </ul>
+                </div>
+                <div class="login-btn">
+                    <button>Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="header-phone">
+
+            <div class="logo">
+                <img src="/images/logo.svg" alt="">
+            </div>
+            <div class="menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="#">BANK</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">INVESTMENTS</a></li>
+                    <li><a href="#">INSURANCE</a></li>
+                    <li><a href="#">MOBILE</a></li>
+                    <li><a href="#">TRIPS</a></li>
+                    <li><a href="#">ENTERTAINMENT</a></li>
+                    <li class="login"><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+
+            <h1 class="main-text">Currency Conventor Online</h1>
+
+            <div class="conventor">
+
+                <div class=" left-side convert">
+                    <h4>I have</h4>
+                    <div class="currencies cr-from">
+                        <button value="RUB" class="activated">RUB</button>
+                        <button value="USD">USD</button>
+                        <button value="EUR">EUR</button>
+                        <button value="GBP">GBP</button>
+                    </div>
+
+                    <div class="input text-from">
+                        <input class="input-text" id="in-put" type="text" placeholder="add...">
+                        <p class="info">1 RUB = 0.012936 USD</p>
+                    </div>
+                </div>
+
+
+
+                <div class="right-side convert">
+                    <h4>I want to buy</h4>
+                    <div class="currencies cr-to">
+                        <button value="RUB">RUB</button>
+                        <button value="USD" class="activated">USD</button>
+                        <button value="EUR">EUR</button>
+                        <button value="GBP">GBP</button>
+                    </div>
+
+                    <div class="input text-to">
+                        <input class="output-text" id="out-put" type="text" placeholder="...">
+                        <p class="info">1 USD = 80.011546 RUB</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+    <script src="/js/imask.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
